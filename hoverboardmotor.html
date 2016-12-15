@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hoverboard Motor Teardown</title>
+		<style>
+			body {
+				background-color: rgb(20,0,30);
+			}
+			.blog {
+				width: 600px;
+				background-color: white;
+				color: black;
+				font-family: Calibri;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 5px;
+				border: 10px solid white;
+			}
+			.blog img {
+				width: 480px;
+				/*margin-left: 60px;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="blog">
+			<h1>
+				July 2016
+			</h1>
+			<h2>
+				Hoverboard Motor Teardown
+			</h2>
+
+			<body>
+				<p>
+					I bought a replacement motor for a hoverboard on ebay for about $35 shipped. I did a quick analysis of some of its specs to determine its potential for higher power output. I also needed a really cheap and fairly tame sensored motor as a test mule for the brushless motor controller I want to build.
+				</p>
+				<p> Specs: </p>
+				<ul>
+					<li>Mass: 3185.6g</li>
+					<li>27N30P configuration</li>
+					<li>Phase resistance: 0.3 &#937</li>
+					<li>Kv: 18 rpm/V</li>
+					<li>Stator dimensions: 105mm OD, 29mm length</li>
+					<li>No load loss: 31.5V*0.68A = 21.4W at 559rpm</li>
+				</ul>
+				<p> 
+					I only got one no load point because the Castle Creations HV80 controller I was using didn't record any current for the 22.2V test. Thus, I have to model the parasitic losses linearly i.e. I can't account for eddy current losses rising with the square of rpm.
+				</p>
+				<p>
+					Based on these findings, assuming that the motor can dissipate 200W of heating which I think is a pretty conservative estimate, this motor should be able to make about 2700W continuously at 147V, 18.3A. For a 7lb motor, that isn't great, especially considering the REALLY (for an ebike) high voltages necessary to balance the copper and parasitic losses. However, 2700W is great for a $35 motor. With a rewind for higher Kv, this could be a great motor, but the necessity of a rewind makes the price a little less attractive.
+				</p>
+				<figure>
+					<img src="images/hoverboard/code.jpg">
+					<figcaption>Model number</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/mass.jpg">
+					<figcaption>3185.6g</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/connectors.jpg">
+					<figcaption>It came with the typical chinese motor connectors</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/4mmbullets.jpg">
+					<figcaption>I replaced them with 4mm bullets</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/phaseres.jpg">
+					<figcaption>Measuring phase resistance</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/bearings.jpg">
+					<figcaption>6202RS bearings</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/magnets.jpg">
+					<figcaption>30 magnets</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/lams.jpg">
+					<figcaption>29.2mm / 59 lams = 0.5mm laminations</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/teeth.jpg">
+					<figcaption>27 stator teeth</figcaption>
+				</figure>
+				<figure>
+					<img src="images/hoverboard/hallsensors.jpg">
+					<figcaption>Hall sensors placed 3 teeth apart</figcaption>
+				</figure>
+			</body>
+		</div>
+	</body>
+</html>
