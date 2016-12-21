@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="icon.png">
+
+	<title>class A audio amplifier</title>
+
+	<style>
+		body {
+			background-color: rgb(20,0,30);
+		}
+		.blog {
+			width: 600px;
+			background-color: white;
+			color: black;
+			font-family: Calibri;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			border: 10px solid white;
+		}
+		.blog img {
+			width: 600px;
+		}
+		figure {
+			margin-left:0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="blog">
+		<h1> Class A Audio Amplifier </h1>
+		<h2> December 2016 </h2>
+
+		<body>
+			<p>
+				My partner and I built a class A audio amplifier based on the JLH design found <a href="http://sound.whsites.net/jll_hood.htm" target="_blank">here</a>. We used the transistor substitutes found <a href="http://sound-au.com/tcaas/jlhtrans.htm" target="_blank">here</a>.
+			</p>
+			<p> 
+				We constructed the circuit on a breadboard and ran wires to the 2N3055 output transistors which were screwed to a heatsink with mica insulators. The input comes from an aux cable to a summing opamp circuit that combines the stereo signal into a single mono signal.
+			</p>	
+			<figure>
+				<img src="images/audio/close.jpg">
+				<figcaption>Breadboarded circuit</figcaption>
+			</figure>
+			<p> 
+				The DC bias is set at about 2A with a 40V power supply, so the output transistors get extremely hot. I need to put them on a much larger heatsink and probably cool them with a fan to keep them at a safe operating temperature. Right now they are getting above 100C which reduces their lifespan greatly. We already had to replace one transistor after about 3 hours. One of the transistors gets hotter than the other since our output is not quite set at half of our input voltage, so one of the transistors drops 23V while the other only drops 17V.
+			</p>
+			<figure>
+				<img src="images/audio/output_transistors.jpg">
+				<figcaption>2N3055 output transistors on their heatsink</figcaption>
+			</figure>
+			<p> 
+				Besides being quite inefficient as a result of its class A topology, the amplifier works quite well. I measured it at about 36W output into an 8&#937 speaker with a 1kHz sinusoid. The frequency response (shown below) is quite wide and flat.
+			</p>
+			<figure>
+				<img src="images/audio/freqresponse.png">
+				<figcaption>Frequency Response</figcaption>
+			</figure>
+			<p>
+				Over winter break, I want to design a PCB to hold the components and put the output transistors on a bigger heatsink. I then want to enclose the whole amplifier in a nice box to play music in my room. I am not sure if I will build two for stereo amplification yet or just keep the system as is in a mono configuration.
+			</p>
+		</body>
+	</div>
+</body>
+</html>
