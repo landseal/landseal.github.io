@@ -3,6 +3,7 @@
 <head>
 	<link rel="icon" href="icon.png">
 	<title>Landseal's Projects</title>
+	<link href="css/lightbox.css" rel="stylesheet">
 	<style>
 		body {
 			background-color: rgb(20,0,30);
@@ -88,10 +89,10 @@
 	</div>
 
 	<div class="left_images">
-		<img src="images/hat.jpg">
+		<a href="images/hat.jpg" data-lightbox="image-1"><img src="images/hat.jpg"></a>
 		<!-- <img src="images/thomas.jpg"> -->
-		<img src="images/hoverboard/teeth.jpg">
-		<img src="images/sciacsXC2016.jpg">
+		<a href="images/hoverboard/teeth.jpg" data-lightbox="image-1"><img src="images/hoverboard/teeth.jpg"></a>
+		<a href="images/sciacsXC2016.jpg" data-lightbox="image-1"><img src="images/sciacsXC2016.jpg"></a>
 	</div>
 	<div class="left_images">
 		<img src="images/teton.png">
@@ -160,5 +161,8 @@
 		<p>Summer 2015</p>
 		<ul><li>I taught at a summer engineering camp for high schoolers in Denver, Colorado called <a href="http://www.bluestampengineering.com/">BlueStamp Engineering</a>. Students designed their own projects ranging from laser harps to self balancing robots, and then I, along with a couple other counselors, would help them as they constructed them. </li> </ul>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="js/lightbox.js"></script>
+
 </body>
 </html>
