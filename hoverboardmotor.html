@@ -45,14 +45,15 @@
 					<li>27N30P configuration</li>
 					<li>Phase resistance: 0.3 &#937</li>
 					<li>Kv: 18 rpm/V</li>
+					<li>Kt: 0.53 Nm/A</li>
 					<li>Stator dimensions: 105mm OD, 29mm length</li>
 					<li>No load loss: 31.5V*0.68A = 21.4W at 559rpm</li>
 				</ul>
 				<p> 
-					I only got one no load point because the Castle Creations HV80 controller I was using didn't record any current for the 22.2V test. Thus, I have to model the parasitic losses linearly i.e. I can't account for eddy current losses rising with the square of rpm.
+					I only got one no load point because the Castle Creations HV80 controller I was using didn't record any current for the 22.2V test. Thus, I'll have to model the parasitic losses linearly for now i.e. I can't account for eddy current losses rising with the square of rpm.
 				</p>
 				<p>
-					Based on these findings, assuming that the motor can dissipate 200W of heating which I think is a pretty conservative estimate, this motor should be able to make about 2700W continuously at 147V, 18.3A. For a 7lb motor, that isn't great, especially considering the REALLY (for an ebike) high voltages necessary to balance the copper and parasitic losses. However, 2700W is great for a $35 motor. With a rewind for higher Kv, this could be a great motor, but the necessity of a rewind makes the price a little less attractive.
+					Based on these findings, assuming that the motor can dissipate 200W of heating which I think is a pretty conservative estimate, this motor should be able to make about 2.65kW continuously at 2600rpm and 9.7Nm. For a 7lb motor, that isn't great, especially considering the REALLY (for an ebike) high voltages necessary to get a decent amount of power out of this motor (>150V). However, 2.65kW is great for a $35 motor. With a rewind for higher Kv, this could be a great motor, but the necessity of a rewind makes the price a little less attractive.
 				</p>
 				<figure>
 					<img src="images/hoverboard/code.jpg">
