@@ -4,9 +4,10 @@ From: Sealand
 This is how I got my lights to be controlled from a webpage on my phone.
 I used the pi to host an Apache2 web server that has a page with a couple
 buttons on it that enable me to control my lights. The buttons call binaries?
-that turn pins on and off that control relays that can switch your lights
-on and off. I've tried to include most of the stuff here, but you'll probably
-find the reference page helpful (lab 6) if you want to copy what I did.
+binary executables? that turn pins on and off that control relays that can 
+switch your lights on and off. I've tried to include most of the stuff here,
+but you'll also find the reference page helpful (lab 6) if you want to copy
+what I did.
 
 Reference (MicroP's lab 6):
 http://pages.hmc.edu/mspencer/fa15/e155/
