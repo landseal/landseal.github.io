@@ -1,12 +1,22 @@
+For: roo
+From: Sealand
+
+This is how I got my lights to be controlled from a webpage on my phone.
+I used the pi to host an Apache2 web server that has a page with a couple
+buttons on it that enable me to control my lights. The buttons call binaries?
+that turn pins on and off that control relays that can switch your lights
+on and off. I've tried to include most of the stuff here, but you'll probably
+find the reference page helpful (lab 6) if you want to copy what I did.
+
 Reference (MicroP's lab 6):
 http://pages.hmc.edu/mspencer/fa15/e155/
 
-install Apache2 webserver
+1. install Apache2 webserver
 
 home page
 /var/www/html
 
-enable CGI
+2. enable CGI
 
 CGI root directory
 /usr/lib/cgi-bin
@@ -14,12 +24,12 @@ CGI root directory
 error log
 /var/log/apache2/error.log
 
-CGI permissions:
+3. CGI permissions:
 sudo chown root:www-data /usr/lib/cgi-bin/{LEDON,LEDOFF}
 sudo chmod 010 /usr/lib/cgi-bin/{LEDON,LEDOFF}
 sudo chmod u+s /usr/lib/cgi-bin/{LEDON,LEDOFF}
 
-Compile c file into binaries:
+4. Compile c file into binaries (c code below - modify to use standard GPIO library):
 gcc -o LEDON LEDON.c
 gcc -o LEDOFF LEDOFF.c
 
