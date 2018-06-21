@@ -54,7 +54,10 @@
 					I only got one no load point because the Castle Creations HV80 controller I was using didn't record any current for the 22.2V test. Thus, I'll have to model the parasitic losses linearly for now i.e. I can't account for eddy current losses rising with the square of rpm.
 				</p>
 				<p>
-					Based on these findings, assuming that the motor can dissipate 200W of heating which I think is a pretty conservative estimate, this motor should be able to make about 2.65kW continuously at 2600rpm and 9.7Nm. For a 7lb motor, that isn't great, especially considering the REALLY (for an ebike) high voltages necessary to get a decent amount of power out of this motor (>150V). However, 2.65kW is great for a $35 motor. With a rewind for higher Kv, this could be a great motor, but the necessity of a rewind makes the price a little less attractive.
+					The Km/$ ratio is extremely high at 0.97/35=0.0277. For comparison, the popular "big block" inrunner is 6.4x lower at 0.75/175=0.0043. Granted, Km only represents a motor's ability to produce torque, so the "big block" makes up for some of its torque shortcomings with speed as it can probably spin 2-3x faster than the hoverboard motor.
+				</p>
+				<<p>
+					The specific Km is 0.97/3.2=0.30 Km/kg. A "big block" motor is half as good at 0.75/5.3=0.14 Km/kg. The very high performance and expensive Joby JM1S is 50% better at 0.832/1.8=0.46. The hoverboard motor matches up very well with these other motors.
 				</p>
 				<figure>
 					<img src="images/hoverboard/code.jpg">
