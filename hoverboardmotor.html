@@ -37,19 +37,27 @@
 
 			<body>
 				<p>
-					Edit: I just read/realized that Km is not proportional to a motor's ability to make torque. It's actually Km<sup>2</sup> that is proportional to a motor's ability to make torque. I'll have to revise some stuff to do Km<sup>2</sup>/$ and stuff like that.
+					<b>Update July 2018:</b> I just read/realized that Km is not proportional to a motor's ability to make torque. It's actually Km<sup>2</sup> that is proportional to a motor's ability to make torque. I'll have to revise some stuff to do Km<sup>2</sup>/$ and stuff like that.
 				</p>
 				<p>
-					I bought a replacement motor for a hoverboard on ebay for about $35 shipped. I did a quick analysis of some of its specs to determine its potential for higher power output. I also needed a really cheap and fairly tame sensored motor as a test mule for the brushless motor controller I want to build.
+					The Km<sup>2</sup> thing is actually pretty confusing and took me a while to wrap my head around. Km is an industry standard parameter, and it represents torque per watt of copper loss. However, if you try to compare a motor with its hypothetical bigger sibling that is exactly two of it stacked end to end, the 2x motor should be able to make 2x as much torque as the little motor. However, the 2x motor only has 2x the Kt with 2x the Rm, so its Km is only <span>&#8730;</span>2 times bigger.
+				</p>
+				<p>
+					You may wonder, then, how does this 2x motor make 2x the torque if it can only produce <span>&#8730;</span>2 times the torque at the same power? The answer is that the 2x motor is 2x as big and can thus dissipate 2x the power as the little motor. At this 2x power, the 2x motor is making 2x the torque of the little motor. It turns out that we can just square Km and also arrive at this 2x torque ability.
+				</p>
+				<p>
+					The overall effect for this motor's performance analysis isn't huge because the Km was close to 1, so Km<sup>2</sup> is also close to 1.
+				<p>
+					<b>Original:</b> I bought a replacement motor for a hoverboard on ebay for about $35 shipped. I did a quick analysis of some of its specs to determine its potential for higher power output. I also needed a really cheap and fairly tame sensored motor as a test mule for the brushless motor controller I want to build.
 				</p>
 				<p> Specs: </p>
 				<ul>
 					<li>Mass: 3185.6g</li>
 					<li>27N30P configuration</li>
-					<li>Phase resistance: 0.3 &#937</li>
+					<li>Phase resistance: 0.3 <span>&#937;</span></li>
 					<li>Kv: 18 rpm/V</li>
 					<li>Kt: 0.53 Nm/A</li>
-					<li>Km: 0.97 Nm/A/sqrt(R)</li>
+					<li>Km: 0.97 Nm/<span>&#8730;</span>W</li>
 					<li>Stator dimensions: 105mm OD, 29mm length</li>
 					<li>No load loss: 31.5V*0.68A = 21.4W at 559rpm</li>
 				</ul>
