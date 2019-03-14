@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="icon.png">
+
+	<title>raspi</title>
+
+	<style>
+		body {
+			background-color: rgb(20,0,30);
+		}
+		.blog {
+			width: 600px;
+			background-color: white;
+			color: black;
+			font-family: Calibri;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			border: 10px solid white;
+		}
+		.blog img {
+			width: 600px;
+		}
+		figure {
+			margin-left: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="blog">
+		<h1> 3/14/2019 (I guess it's pi day...) </h1>
+		<h2> Some helpful info for raspberry pi wanderings: </h2>
+
+		<body>
+			<p>
+				Wifi setup:
+			</p>
+			<ul>
+				<li>ifconfig - lists internet connections</li>
+				<li>sudo nano etc/network/interfaces - place to put internet settings, mine is below<br />
+					<br />
+					# Please note that this file is written to be used with dhcpcd.<br />
+					# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'.<br />
+					<br />
+					auto lo<br />
+					<br />
+					iface lo inet loopback<br />
+					iface eth0 inet dhcp<br />
+					<br />
+					allow-hotplug wlan0<br />
+					auto wlan0<br />
+					<br />
+					iface wlan0 inet dhcp<br />
+					        wpa-ssid "Motiv_Guest"<br />
+					        wpa-psk "password"<br />
+					<br />
+					iface wlan0 inet dhcp<br />
+					        wpa-ssid "Nicholas"<br />
+					        wpa-psk "password"<br />
+					<br />
+				</li>
+				<li>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf - most tutorials
+						say to point interfaces to wpa_supplicant and put the network
+						information in there, but this didn't work for me
+				</li>
+			</ul>
+			<p>
+				Login credentials:
+			</p>
+			<ul>
+				<li>user: pi</li>
+				<li>password: i****k</li>
+			</ul>
+			<figure>
+				<img src="images/mandelbrot.png">
+				<figcaption>Model number</figcaption>
+			</figure>
+			<p>
+				more stuff
+			</p>
+		</body>
+	</div>
+</body>
+</html>
